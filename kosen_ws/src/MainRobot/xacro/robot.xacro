@@ -1,0 +1,25 @@
+<robot name="test_robot" xmlns:xacro="http://ros.org/wiki/xacro">
+  <material name="red">
+    <color rgba="1.0 0.0 0.0 2.0"/>
+  </material>
+
+  <xacro:macro name="box_macro" params="suffix parent origin_x origin_y">
+    <joint name="${suffix}_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="${origin_x} ${origin_y} 0.05"/>
+      <parent link="${parent}"/>
+      <child  link="${suffix}_link"/>
+    </joint>
+
+    <link name="${suffix}_link">
+      <visual>
+        <geometry>
+          <box size="0.1 0.1 0.1" />
+        </geometry>
+        <material name="red"/>
+      </visual>
+    </link>
+  </xacro:macro>  
+
+  <link name="base_link"/>
+  <xacro:box_macro suffix="unit0"  parent="base_link" origin_x="0" origin_y="0.0"/>
+</robot>

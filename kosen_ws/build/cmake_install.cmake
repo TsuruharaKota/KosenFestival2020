@@ -131,6 +131,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/tsuruhara/KosenFestival2020/kosen_ws/build/gtest/cmake_install.cmake")
+  include("/home/tsuruhara/KosenFestival2020/kosen_ws/build/MainRobot/cmake_install.cmake")
 
 endif()
 

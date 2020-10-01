@@ -1,0 +1,8 @@
+prefix=/home/tsuruhara/KosenFestival2020/kosen_ws/install
+
+Name: MainRobot
+Description: Description of MainRobot
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

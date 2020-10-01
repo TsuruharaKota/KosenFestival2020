@@ -1,2 +1,2 @@
-
+MainRobot
 -DCATKIN_DEVEL_PREFIX=/home/tsuruhara/KosenFestival2020/kosen_ws/devel -DCMAKE_INSTALL_PREFIX=/home/tsuruhara/KosenFestival2020/kosen_ws/install -G Unix Makefiles
