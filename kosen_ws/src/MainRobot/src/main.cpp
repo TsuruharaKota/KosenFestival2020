@@ -36,16 +36,16 @@ std::vector<route_tuple> routeInit(){
   std::vector<route_tuple> point;
   switch(color){
     case CoursePt::acrobatic:
-      point.push_back(route_tuple( 1.0f,  1.0f,  1.0f,   1.0f));
-      point.push_back(route_tuple( 0.0f, 10.0f,  1.0f,  10.0f));
-      point.push_back(route_tuple( 0.0f, 20.0f,  1.0f,  20.0f));
-      point.push_back(route_tuple( 0.0f, 30.0f,  1.0f,  10.0f));
-      point.push_back(route_tuple( 1.5f, 35.0f, -1.0f,  5.0f));
-      point.push_back(route_tuple( 5.0f, 39.0f, -1.0f,  10.0f));
-      point.push_back(route_tuple(10.0f, 40.0f,  1.0f,  20.0f));
-      point.push_back(route_tuple(20.0f, 40.0f,  1.0f,  20.0f));
-      point.push_back(route_tuple(30.0f, 40.0f,  1.0f,  10.0f));
-      point.push_back(route_tuple(40.0f, 40.0f,  1.0f,  0.0f));
+      point.push_back(route_tuple( 0.0f, 0.0f,  1.0f,   0.0f));
+      point.push_back(route_tuple( 0.0f, 1.0f,  1.0f,  10.0f));
+      point.push_back(route_tuple( 0.0f, 2.0f,  1.0f,  20.0f));
+      point.push_back(route_tuple( 0.0f, 3.0f,  1.0f,  10.0f));
+      point.push_back(route_tuple(0.15f, 3.5f, -1.0f,   5.0f));
+      point.push_back(route_tuple( 0.5f, 3.9f, -1.0f,  10.0f));
+      point.push_back(route_tuple( 1.0f, 4.0f,  1.0f,  20.0f));
+      point.push_back(route_tuple( 2.0f, 4.0f,  1.0f,  20.0f));
+      point.push_back(route_tuple( 3.0f, 4.0f,  1.0f,  10.0f));
+      point.push_back(route_tuple( 4.0f, 4.0f,  1.0f,  0.0f));
       break;
     case CoursePt::qualifying:
       break;
