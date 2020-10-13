@@ -31,6 +31,7 @@ inline double get_time_sec(void){
 
 enum class CoursePt{
   acrobatic,
+  straight,
   qualifying,
   final
 };
@@ -51,6 +52,18 @@ std::vector<route_tuple> routeInit(){
       point.push_back(route_tuple(  2.0f, 4.0f,  2.0f,   2.0f));
       point.push_back(route_tuple(  3.0f, 4.0f,  1.0f,   1.0f));
       point.push_back(route_tuple(  4.0f, 4.0f,  0.0f,   0.0f));
+      break;
+    case CoursePt::straight:
+      point.push_back(route_tuple(  0.0f, 0.0f,  0.0f,   0.0f));
+      point.push_back(route_tuple(  0.0f, 1.0f,  0.0f,   1.0f));
+      point.push_back(route_tuple(  0.0f, 2.0f,  0.0f,   2.0f));
+      point.push_back(route_tuple(  0.0f, 3.0f,  0.0f,   3.0f));
+      point.push_back(route_tuple(  0.0f, 4.0f,  0.0f,   6.0f));
+      point.push_back(route_tuple(  0.0f, 5.0f,  0.0f,   9.0f));
+      point.push_back(route_tuple(  0.0f, 6.0f,  0.0f,  12.0f));
+      point.push_back(route_tuple(  0.0f, 7.0f,  0.0f,   6.0f));
+      point.push_back(route_tuple(  0.0f, 8.0f,  0.0f,   3.0f));
+      point.push_back(route_tuple(  0.0f, 9.0f,  0.0f,   0.0f));
       break;
     case CoursePt::qualifying:
       break;
@@ -78,7 +91,7 @@ int main(int argc, char **argv){
     std::string source_frame = "base_link";
     std::string target_frame = "unit0_link";
        
-    CatmullRomSpline splineObject(routeInit<CoursePt::acrobatic>(), 100);
+    CatmullRomSpline splineObject(routeInit<CoursePt::straight>(), 100);
     //経路生成終了
     std::vector<Vector4f> route_info = splineObject();
 
@@ -93,14 +106,18 @@ int main(int argc, char **argv){
         if(update(ref_time, loop_counter * 0.01)){
             ++route_counter;
             if(route_info.size() < route_counter){return 0;}
-            Vector4f nowParam = route_info.at(route_counter);
+            Vector4f nowParam = route_info.at(route_counter - 1);
             ref_x = nowParam(0);
             ref_y = nowParam(1);
             ref_x_diff = ref_x - ref_x_prev;
             ref_y_diff = ref_y - ref_y_prev;
             ref_rad = nowParam(2);
             ref_speed = nowParam(3);
-            ref_time = std::sqrt(((ref_x_diff * ref_x_diff) + (ref_y_diff * ref_y_diff))) / ref_speed;
+            if(ref_speed == 0){
+              ref_time = 0;
+            }else{
+              ref_time = std::sqrt(((ref_x_diff * ref_x_diff) + (ref_y_diff * ref_y_diff))) / ref_speed;
+            }
             ROS_INFO("%lf %lf %lf %lf\n", ref_x, ref_y, ref_speed, ref_time);
             ref_x_prev = ref_x;
             ref_y_prev = ref_y;

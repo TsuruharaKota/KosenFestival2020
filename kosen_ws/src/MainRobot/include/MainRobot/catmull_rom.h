@@ -114,12 +114,15 @@ class CatmullRomSpline{
                             temp[k] = 0.5f * ((a[k] * t * t * t) + (b[k] * t * t) + (c[k] * t) + d[k]);
                         }
                     }
-                    Vector4f Pos(temp[0], temp[1], temp[2], temp[3]);
-                    goal_point.push_back(Pos);
+                    Vector4f pos_temp(temp[0], temp[1], temp[2], temp[3]);
+                    goal_point.push_back(pos_temp);
                     x_prev = temp[0];
                     y_prev = temp[1];
                 }
-            }
+            } 
+            int temp_size = transit_point.size();
+            Vector4f pos_last(transit_point.at(temp_size - 1).x, transit_point.at(temp_size - 1).y, transit_point.at(temp_size - 1).theta, transit_point.at(temp_size - 1).speed);
+            goal_point.push_back(pos_last);
             //この時点で座標は生成できている
             std::ofstream outputFile("Route.txt");
             for(auto &point : goal_point){outputFile << std::fixed << std::setprecision(5) << point(0) << " " << point(1) << " " << point(2) << " " << point(3) << "\n";}
