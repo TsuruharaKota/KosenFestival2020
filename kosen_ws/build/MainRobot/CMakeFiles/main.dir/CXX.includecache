@@ -29,6 +29,8 @@ string
 -
 iomanip
 -
+ros/ros.h
+-
 
 /home/tsuruhara/KosenFestival2020/kosen_ws/src/MainRobot/src/main.cpp
 ros/ros.h
@@ -51,17 +53,15 @@ array
 -
 utility
 -
-/usr/local/include/eigen3/Dense
--
 iostream
 -
 queue
 -
 fstream
 -
-string
--
 iomanip
+-
+chrono
 -
 nav_msgs/Path.h
 -
