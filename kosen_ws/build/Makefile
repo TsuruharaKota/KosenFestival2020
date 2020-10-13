@@ -714,6 +714,19 @@ geometry_msgs_generate_messages_nodejs/fast:
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named wheel_pid
+
+# Build rule for target.
+wheel_pid: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wheel_pid
+.PHONY : wheel_pid
+
+# fast build rule for target.
+wheel_pid/fast:
+	$(MAKE) -f MainRobot/CMakeFiles/wheel_pid.dir/build.make MainRobot/CMakeFiles/wheel_pid.dir/build
+.PHONY : wheel_pid/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_py
 
 # Build rule for target.
@@ -1002,6 +1015,7 @@ help:
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... wheel_pid"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_eus"
