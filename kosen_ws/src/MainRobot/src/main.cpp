@@ -17,6 +17,7 @@
 #include<std_msgs/String.h>
 #include<geometry_msgs/PoseStamped.h>
 #include<tf/transform_broadcaster.h>
+#include<std_msgs/Float32.h>
 
 using namespace std::chrono;
 using namespace Eigen;
@@ -88,6 +89,9 @@ int main(int argc, char **argv){
     ros::init(argc, argv, "main");
     ros::NodeHandle n;
 
+    ros::Publisher vel_x_pub = n.advertise<std_msgs::Float32>("/cmd_vel_x", 10);
+    ros::Publisher vel_y_pub = n.advertise<std_msgs::Float32>("/cmd_vel_y", 10);
+    ros::Publisher rad_pub = n.advertise<std_msgs::Float32>("/cmd_vel_rad", 10);  
     std::string source_frame = "base_link";
     std::string target_frame = "unit0_link";
        
@@ -100,7 +104,9 @@ int main(int argc, char **argv){
     int route_counter{};
     unsigned long int loop_counter{};
     double ref_x = 0, ref_x_diff = 0, ref_x_prev = 0, ref_y = 0, ref_y_diff = 0, ref_y_prev = 0, ref_rad = 0, ref_speed = 0, ref_time = 0;
-   
+    double ref_x_speed = 0, ref_y_speed = 0;
+    std_msgs::Float32 send_data_vel_x;
+    std_msgs::Float32 send_data_vel_y;
     while(ros::ok()){
         ++loop_counter;
         if(update(ref_time, loop_counter * 0.01)){
@@ -115,14 +121,19 @@ int main(int argc, char **argv){
             ref_speed = nowParam(3);
             if(ref_speed == 0){
               ref_time = 0;
+              ref_x_speed = 0;
+              ref_y_speed = 0;
             }else{
               ref_time = std::sqrt(((ref_x_diff * ref_x_diff) + (ref_y_diff * ref_y_diff))) / ref_speed;
+              ref_x_speed = ref_x_diff / ref_time;
+              ref_y_speed = ref_y_diff / ref_time;
             }
-            ROS_INFO("%lf %lf %lf %lf\n", ref_x, ref_y, ref_speed, ref_time);
+            //ROS_INFO("%lf %lf %lf %lf\n", ref_x, ref_y, ref_speed, ref_time);
+            ROS_INFO("speed = %lf", std::sqrt((ref_x_speed * ref_x_speed) + (ref_y_speed * ref_y_speed)));
             ref_x_prev = ref_x;
             ref_y_prev = ref_y;
         }
-        
+
         geometry_msgs::Pose t_pose;
 
         t_pose.position.x = ref_x;
@@ -132,6 +143,13 @@ int main(int argc, char **argv){
         tf::Transform transform;
         poseMsgToTF(t_pose, transform);
         br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), source_frame, target_frame));
+
+        send_data_vel_x.data = ref_x_speed;
+        send_data_vel_y.data = ref_y_speed;
+
+        vel_x_pub.publish(send_data_vel_x);
+        vel_y_pub.publish(send_data_vel_y);
+
         ros::spinOnce();
         loop_rate.sleep();
     }
