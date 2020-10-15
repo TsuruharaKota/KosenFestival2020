@@ -91,7 +91,7 @@ int main(int argc, char **argv){
     std::string source_frame = "base_link";
     std::string target_frame = "unit0_link";
        
-    CatmullRomSpline splineObject(routeInit<CoursePt::straight>(), 100);
+    CatmullRomSpline splineObject(routeInit<CoursePt::acrobatic>(), 100);
     //経路生成終了
     std::vector<Vector4f> route_info = splineObject();
 
