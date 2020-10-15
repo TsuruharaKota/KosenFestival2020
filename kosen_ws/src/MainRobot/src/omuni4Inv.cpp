@@ -8,6 +8,7 @@
 #include</usr/local/include/eigen3/Dense>
 #include</usr/local/include/eigen3/Core>
 #include</usr/local/include/eigen3/Geometry>
+#include<cmath>
 
 using namespace Eigen;
 using std::vector;
@@ -24,10 +25,10 @@ void velYCallback(const std_msgs::Float32 &msg){
 
 void omuni4Inv(float(&_wheel_vel)[4]){
     MatrixXf inv_matrix(4, 3);
-    inv_matrix << -1, 0, L,
-                   0, 1, L,
-                  -1, 0, L,
-                   0,-1, L;
+    inv_matrix << -sin(robot_rad + (M_PI / 4)),       cos(robot_rad + (M_PI / 4))      , L,
+                  -sin(robot_rad + ((M_PI * 3) / 4)), cos(robot_rad + ((M_PI * 3) / 4)), L,
+                  -sin(robot_rad + ((M_PI * 5) / 4)), cos(robot_rad + ((M_PI * 3) / 4)), L,
+                  -sin(robot_rad + ((M_PI * 7) / 4)), cos(robot_rad + ((M_PI * 7) / 4)), L;
     Vector3f vel_vec(v_x, v_y, v_rad);
     Vector4f vel_wheel = inv_matrix * vel_vec;
     for(int i = 0; i < 4; ++i){
@@ -47,9 +48,7 @@ int main(int argc, char **argv){
   
   while(ros::ok()){
     omuni4Inv(wheel_vel_ref);    //各タイヤの目標速度を取得
-    for(auto vel : wheel_vel_ref){
-        ROS_INFO("%lf", vel);
-    }
+    ROS_INFO("%3lf %3lf %3lf %3lf", wheel_vel_ref[0], wheel_vel_ref[1], wheel_vel_ref[2], wheel_vel_ref[3]);
     loop_rate.sleep();
     ros::spinOnce();
   }
