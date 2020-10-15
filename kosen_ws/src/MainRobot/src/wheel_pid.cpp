@@ -21,8 +21,8 @@ class PID{
   public:
     PID(float _p_gain, float _i_gain, float _d_gain, float _freq):p_gain_(_p_gain), i_gain_(_i_gain), d_gain_(_d_gain), freq_(_freq){}
     ~PID(){}
-    float operator()(float _ref_val, float _now_val){
-      return p_gain_ * (_ref_val - _now_val) + I - D;
+    float operator()(float _ref_val, float _now_val, float _prev_val){
+      return p_gain_ * (_ref_val - _now_val) + I - d_gain_ * (_now_val - _prev_val) * (1 / freq_);
     }
   private:
     const float p_gain_;
@@ -77,6 +77,8 @@ int main(int argc, char **argv){
   
   std::array<float, 4> wheel_vel_ref;
   std::array<float, 4> wheel_vel_now;
+  std::array<float, 4> wheel_vel_prev;
+
   constexpr std::array<unsigned int, 4> WHEEL_ID = {0, 1, 2, 3};
   constexpr std::array<unsigned int, 4> WHEEL_CMD = {0, 1, 2 ,3};
   
@@ -84,14 +86,19 @@ int main(int argc, char **argv){
   RotaryInc wheelEnc[4] = {RotaryInc(26, 19, 1), RotaryInc(6, 5, 1), RotaryInc(11, 9, 1), RotaryInc(1, 2, 3)};
   ros::Rate loop_rate(100);
 
+  //FIXME:パラメータ設定が必要
+  constexpr int resolution = 1;
+  constexpr int multiplication = 1;
+  
   while(ros::ok()){
-    wheel_now[i] = ((((double)rotary[i].get() / (resolution * multiplication)) * 101.6) / 1000);
     omuni4Inv(wheel_vel_ref);    //各タイヤの目標速度を取得
     for(int i = 0; i < 4; ++i){
+      wheel_vel_now[i] = (((static_cast<double>(wheelEnc[i].get()) / (resolution * multiplication)) * 101.6) / 1000);
       srv.request.id = WHEEL_ID[i];
 	    srv.request.cmd = WHEEL_CMD[i];
-      srv.request.data = velPWMConv(wheelPID[i](wheel_vel_ref[i], wheel_vel_now[i]));
-	    motor_speed.call(srv); 
+      srv.request.data = velPWMConv(wheelPID[i](wheel_vel_ref[i], wheel_vel_now[i], wheel_vel_prev[i]));
+	    motor_speed.call(srv);
+      wheel_vel_prev[i] = wheel_vel_now[i]
     }
     loop_rate.sleep();
     ros::spinOnce();
