@@ -138,6 +138,7 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(main src/main.cpp)
+add_executable(omuni4Inv src/omuni4Inv.cpp)
 ##add_executable(wheel_pid src/wheel_pid.cpp ~/KosenFestival2020/kosen_ws/src/MainRobot/include/basic_utility/raspi/src/rotary_inc.cpp ~/KosenFestival2020/kosen_ws/src/MainRobot/include/basic_utility/raspi/src/pigpiod.cpp)
 
 ## Rename C++ executable without prefix
@@ -145,15 +146,20 @@ add_executable(main src/main.cpp)
 ## target back to the shorter version for ease of user use
 ## e.g. "rosrun someones_pkg node" instead of "rosrun someones_pkg someones_pkg_node"
 set_target_properties(main PROPERTIES OUTPUT_NAME main PREFIX "")
+set_target_properties(omuni4Inv PROPERTIES OUTPUT_NAME omuni4Inv PREFIX "")
 ##set_target_properties(wheel_pid PROPERTIES OUTPUT_NAME wheel_pid PREFIX "")
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 add_dependencies(main ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(omuni4Inv ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 ##add_dependencies(wheel_pid ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(main
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(omuni4Inv
   ${catkin_LIBRARIES}
 )
 ##target_link_libraries(wheel_pid

@@ -454,6 +454,19 @@ actionlib_msgs_generate_messages_nodejs/fast:
 .PHONY : actionlib_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named omuni4Inv
+
+# Build rule for target.
+omuni4Inv: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 omuni4Inv
+.PHONY : omuni4Inv
+
+# fast build rule for target.
+omuni4Inv/fast:
+	$(MAKE) -f MainRobot/CMakeFiles/omuni4Inv.dir/build.make MainRobot/CMakeFiles/omuni4Inv.dir/build
+.PHONY : omuni4Inv/fast
+
+#=============================================================================
 # Target rules for targets named actionlib_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -982,6 +995,7 @@ help:
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_nodejs"
+	@echo "... omuni4Inv"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_py"

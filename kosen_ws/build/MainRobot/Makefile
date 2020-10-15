@@ -363,6 +363,21 @@ actionlib_msgs_generate_messages_nodejs/fast:
 .PHONY : actionlib_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
+MainRobot/CMakeFiles/omuni4Inv.dir/rule:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/omuni4Inv.dir/rule
+.PHONY : MainRobot/CMakeFiles/omuni4Inv.dir/rule
+
+# Convenience name for target.
+omuni4Inv: MainRobot/CMakeFiles/omuni4Inv.dir/rule
+
+.PHONY : omuni4Inv
+
+# fast build rule for target.
+omuni4Inv/fast:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/omuni4Inv.dir/build.make MainRobot/CMakeFiles/omuni4Inv.dir/build
+.PHONY : omuni4Inv/fast
+
+# Convenience name for target.
 MainRobot/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
 	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
 .PHONY : MainRobot/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
@@ -959,6 +974,33 @@ src/main.cpp.s:
 	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/main.dir/build.make MainRobot/CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/omuni4Inv.o: src/omuni4Inv.cpp.o
+
+.PHONY : src/omuni4Inv.o
+
+# target to build an object file
+src/omuni4Inv.cpp.o:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/omuni4Inv.dir/build.make MainRobot/CMakeFiles/omuni4Inv.dir/src/omuni4Inv.cpp.o
+.PHONY : src/omuni4Inv.cpp.o
+
+src/omuni4Inv.i: src/omuni4Inv.cpp.i
+
+.PHONY : src/omuni4Inv.i
+
+# target to preprocess a source file
+src/omuni4Inv.cpp.i:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/omuni4Inv.dir/build.make MainRobot/CMakeFiles/omuni4Inv.dir/src/omuni4Inv.cpp.i
+.PHONY : src/omuni4Inv.cpp.i
+
+src/omuni4Inv.s: src/omuni4Inv.cpp.s
+
+.PHONY : src/omuni4Inv.s
+
+# target to generate assembly for a file
+src/omuni4Inv.cpp.s:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/omuni4Inv.dir/build.make MainRobot/CMakeFiles/omuni4Inv.dir/src/omuni4Inv.cpp.s
+.PHONY : src/omuni4Inv.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -982,6 +1024,7 @@ help:
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_nodejs"
+	@echo "... omuni4Inv"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_py"
@@ -1026,6 +1069,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/omuni4Inv.o"
+	@echo "... src/omuni4Inv.i"
+	@echo "... src/omuni4Inv.s"
 .PHONY : help
 
 
