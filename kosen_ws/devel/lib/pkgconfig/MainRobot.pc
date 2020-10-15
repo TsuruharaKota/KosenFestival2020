@@ -3,6 +3,6 @@ prefix=/home/tsuruhara/KosenFestival2020/kosen_ws/devel
 Name: MainRobot
 Description: Description of MainRobot
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/tsuruhara/KosenFestival2020/kosen_ws/devel/include
 Libs: -L${prefix}/lib 
 Requires: 

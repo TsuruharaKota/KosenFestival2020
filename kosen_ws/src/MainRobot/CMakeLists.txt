@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
   tf
   geometry_msgs
   nav_msgs
+  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -58,11 +59,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+add_service_files(
+  FILES
+  motor_serial.srv
+)
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -72,10 +72,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs
-# )
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -139,6 +139,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(main src/main.cpp)
 add_executable(omuni4Inv src/omuni4Inv.cpp)
+add_executable(gain_setting src/gain_setting.cpp ~/KosenFestival2020/kosen_ws/src/MainRobot/include/basic_utility/raspi/src/rotary_inc.cpp ~/KosenFestival2020/kosen_ws/src/MainRobot/include/basic_utility/raspi/src/pigpiod.cpp)
 ##add_executable(wheel_pid src/wheel_pid.cpp ~/KosenFestival2020/kosen_ws/src/MainRobot/include/basic_utility/raspi/src/rotary_inc.cpp ~/KosenFestival2020/kosen_ws/src/MainRobot/include/basic_utility/raspi/src/pigpiod.cpp)
 
 ## Rename C++ executable without prefix
@@ -147,12 +148,14 @@ add_executable(omuni4Inv src/omuni4Inv.cpp)
 ## e.g. "rosrun someones_pkg node" instead of "rosrun someones_pkg someones_pkg_node"
 set_target_properties(main PROPERTIES OUTPUT_NAME main PREFIX "")
 set_target_properties(omuni4Inv PROPERTIES OUTPUT_NAME omuni4Inv PREFIX "")
+set_target_properties(gain_setting PROPERTIES OUTPUT_NAME gain_setting PREFIX "")
 ##set_target_properties(wheel_pid PROPERTIES OUTPUT_NAME wheel_pid PREFIX "")
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 add_dependencies(main ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(omuni4Inv ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(gain_setting ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 ##add_dependencies(wheel_pid ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
@@ -161,6 +164,10 @@ target_link_libraries(main
 )
 target_link_libraries(omuni4Inv
   ${catkin_LIBRARIES}
+)
+target_link_libraries(gain_setting
+  ${catkin_LIBRARIES}
+  pigpiod_if2
 )
 ##target_link_libraries(wheel_pid
 ##  ${catkin_LIBRARIES}

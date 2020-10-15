@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=c++1z
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"MainRobot\"
 
-CXX_INCLUDES = -I/home/tsuruhara/KosenFestival2020/kosen_ws/src/MainRobot/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/tsuruhara/KosenFestival2020/kosen_ws/devel/include -I/home/tsuruhara/KosenFestival2020/kosen_ws/src/MainRobot/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

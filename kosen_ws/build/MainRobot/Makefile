@@ -168,6 +168,96 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+MainRobot/CMakeFiles/gain_setting.dir/rule:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/gain_setting.dir/rule
+.PHONY : MainRobot/CMakeFiles/gain_setting.dir/rule
+
+# Convenience name for target.
+gain_setting: MainRobot/CMakeFiles/gain_setting.dir/rule
+
+.PHONY : gain_setting
+
+# fast build rule for target.
+gain_setting/fast:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/gain_setting.dir/build.make MainRobot/CMakeFiles/gain_setting.dir/build
+.PHONY : gain_setting/fast
+
+# Convenience name for target.
+MainRobot/CMakeFiles/MainRobot_genlisp.dir/rule:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/MainRobot_genlisp.dir/rule
+.PHONY : MainRobot/CMakeFiles/MainRobot_genlisp.dir/rule
+
+# Convenience name for target.
+MainRobot_genlisp: MainRobot/CMakeFiles/MainRobot_genlisp.dir/rule
+
+.PHONY : MainRobot_genlisp
+
+# fast build rule for target.
+MainRobot_genlisp/fast:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/MainRobot_genlisp.dir/build.make MainRobot/CMakeFiles/MainRobot_genlisp.dir/build
+.PHONY : MainRobot_genlisp/fast
+
+# Convenience name for target.
+MainRobot/CMakeFiles/MainRobot_geneus.dir/rule:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/MainRobot_geneus.dir/rule
+.PHONY : MainRobot/CMakeFiles/MainRobot_geneus.dir/rule
+
+# Convenience name for target.
+MainRobot_geneus: MainRobot/CMakeFiles/MainRobot_geneus.dir/rule
+
+.PHONY : MainRobot_geneus
+
+# fast build rule for target.
+MainRobot_geneus/fast:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/MainRobot_geneus.dir/build.make MainRobot/CMakeFiles/MainRobot_geneus.dir/build
+.PHONY : MainRobot_geneus/fast
+
+# Convenience name for target.
+MainRobot/CMakeFiles/MainRobot_generate_messages_eus.dir/rule:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/MainRobot_generate_messages_eus.dir/rule
+.PHONY : MainRobot/CMakeFiles/MainRobot_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+MainRobot_generate_messages_eus: MainRobot/CMakeFiles/MainRobot_generate_messages_eus.dir/rule
+
+.PHONY : MainRobot_generate_messages_eus
+
+# fast build rule for target.
+MainRobot_generate_messages_eus/fast:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/MainRobot_generate_messages_eus.dir/build.make MainRobot/CMakeFiles/MainRobot_generate_messages_eus.dir/build
+.PHONY : MainRobot_generate_messages_eus/fast
+
+# Convenience name for target.
+MainRobot/CMakeFiles/MainRobot_generate_messages_cpp.dir/rule:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/MainRobot_generate_messages_cpp.dir/rule
+.PHONY : MainRobot/CMakeFiles/MainRobot_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+MainRobot_generate_messages_cpp: MainRobot/CMakeFiles/MainRobot_generate_messages_cpp.dir/rule
+
+.PHONY : MainRobot_generate_messages_cpp
+
+# fast build rule for target.
+MainRobot_generate_messages_cpp/fast:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/MainRobot_generate_messages_cpp.dir/build.make MainRobot/CMakeFiles/MainRobot_generate_messages_cpp.dir/build
+.PHONY : MainRobot_generate_messages_cpp/fast
+
+# Convenience name for target.
+MainRobot/CMakeFiles/MainRobot_generate_messages.dir/rule:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/MainRobot_generate_messages.dir/rule
+.PHONY : MainRobot/CMakeFiles/MainRobot_generate_messages.dir/rule
+
+# Convenience name for target.
+MainRobot_generate_messages: MainRobot/CMakeFiles/MainRobot_generate_messages.dir/rule
+
+.PHONY : MainRobot_generate_messages
+
+# fast build rule for target.
+MainRobot_generate_messages/fast:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/MainRobot_generate_messages.dir/build.make MainRobot/CMakeFiles/MainRobot_generate_messages.dir/build
+.PHONY : MainRobot_generate_messages/fast
+
+# Convenience name for target.
 MainRobot/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
 	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
 .PHONY : MainRobot/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
@@ -468,6 +558,21 @@ rosgraph_msgs_generate_messages_py/fast:
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+MainRobot/CMakeFiles/MainRobot_genpy.dir/rule:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/MainRobot_genpy.dir/rule
+.PHONY : MainRobot/CMakeFiles/MainRobot_genpy.dir/rule
+
+# Convenience name for target.
+MainRobot_genpy: MainRobot/CMakeFiles/MainRobot_genpy.dir/rule
+
+.PHONY : MainRobot_genpy
+
+# fast build rule for target.
+MainRobot_genpy/fast:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/MainRobot_genpy.dir/build.make MainRobot/CMakeFiles/MainRobot_genpy.dir/build
+.PHONY : MainRobot_genpy/fast
+
+# Convenience name for target.
 MainRobot/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 .PHONY : MainRobot/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
@@ -618,6 +723,21 @@ actionlib_msgs_generate_messages_cpp/fast:
 .PHONY : actionlib_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
+MainRobot/CMakeFiles/MainRobot_gennodejs.dir/rule:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/MainRobot_gennodejs.dir/rule
+.PHONY : MainRobot/CMakeFiles/MainRobot_gennodejs.dir/rule
+
+# Convenience name for target.
+MainRobot_gennodejs: MainRobot/CMakeFiles/MainRobot_gennodejs.dir/rule
+
+.PHONY : MainRobot_gennodejs
+
+# fast build rule for target.
+MainRobot_gennodejs/fast:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/MainRobot_gennodejs.dir/build.make MainRobot/CMakeFiles/MainRobot_gennodejs.dir/build
+.PHONY : MainRobot_gennodejs/fast
+
+# Convenience name for target.
 MainRobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
 	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 .PHONY : MainRobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
@@ -633,6 +753,21 @@ rosgraph_msgs_generate_messages_cpp/fast:
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
+MainRobot/CMakeFiles/MainRobot_generate_messages_py.dir/rule:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/MainRobot_generate_messages_py.dir/rule
+.PHONY : MainRobot/CMakeFiles/MainRobot_generate_messages_py.dir/rule
+
+# Convenience name for target.
+MainRobot_generate_messages_py: MainRobot/CMakeFiles/MainRobot_generate_messages_py.dir/rule
+
+.PHONY : MainRobot_generate_messages_py
+
+# fast build rule for target.
+MainRobot_generate_messages_py/fast:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/MainRobot_generate_messages_py.dir/build.make MainRobot/CMakeFiles/MainRobot_generate_messages_py.dir/build
+.PHONY : MainRobot_generate_messages_py/fast
+
+# Convenience name for target.
 MainRobot/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
 	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : MainRobot/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
@@ -646,6 +781,21 @@ roscpp_generate_messages_lisp: MainRobot/CMakeFiles/roscpp_generate_messages_lis
 roscpp_generate_messages_lisp/fast:
 	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make MainRobot/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
+
+# Convenience name for target.
+MainRobot/CMakeFiles/_MainRobot_generate_messages_check_deps_motor_serial.dir/rule:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/_MainRobot_generate_messages_check_deps_motor_serial.dir/rule
+.PHONY : MainRobot/CMakeFiles/_MainRobot_generate_messages_check_deps_motor_serial.dir/rule
+
+# Convenience name for target.
+_MainRobot_generate_messages_check_deps_motor_serial: MainRobot/CMakeFiles/_MainRobot_generate_messages_check_deps_motor_serial.dir/rule
+
+.PHONY : _MainRobot_generate_messages_check_deps_motor_serial
+
+# fast build rule for target.
+_MainRobot_generate_messages_check_deps_motor_serial/fast:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/_MainRobot_generate_messages_check_deps_motor_serial.dir/build.make MainRobot/CMakeFiles/_MainRobot_generate_messages_check_deps_motor_serial.dir/build
+.PHONY : _MainRobot_generate_messages_check_deps_motor_serial/fast
 
 # Convenience name for target.
 MainRobot/CMakeFiles/tf_generate_messages_lisp.dir/rule:
@@ -678,6 +828,21 @@ geometry_msgs_generate_messages_nodejs/fast:
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
+MainRobot/CMakeFiles/MainRobot_generate_messages_nodejs.dir/rule:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/MainRobot_generate_messages_nodejs.dir/rule
+.PHONY : MainRobot/CMakeFiles/MainRobot_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+MainRobot_generate_messages_nodejs: MainRobot/CMakeFiles/MainRobot_generate_messages_nodejs.dir/rule
+
+.PHONY : MainRobot_generate_messages_nodejs
+
+# fast build rule for target.
+MainRobot_generate_messages_nodejs/fast:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/MainRobot_generate_messages_nodejs.dir/build.make MainRobot/CMakeFiles/MainRobot_generate_messages_nodejs.dir/build
+.PHONY : MainRobot_generate_messages_nodejs/fast
+
+# Convenience name for target.
 MainRobot/CMakeFiles/roscpp_generate_messages_py.dir/rule:
 	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : MainRobot/CMakeFiles/roscpp_generate_messages_py.dir/rule
@@ -691,6 +856,21 @@ roscpp_generate_messages_py: MainRobot/CMakeFiles/roscpp_generate_messages_py.di
 roscpp_generate_messages_py/fast:
 	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/roscpp_generate_messages_py.dir/build.make MainRobot/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
+
+# Convenience name for target.
+MainRobot/CMakeFiles/MainRobot_gencpp.dir/rule:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/MainRobot_gencpp.dir/rule
+.PHONY : MainRobot/CMakeFiles/MainRobot_gencpp.dir/rule
+
+# Convenience name for target.
+MainRobot_gencpp: MainRobot/CMakeFiles/MainRobot_gencpp.dir/rule
+
+.PHONY : MainRobot_gencpp
+
+# fast build rule for target.
+MainRobot_gencpp/fast:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/MainRobot_gencpp.dir/build.make MainRobot/CMakeFiles/MainRobot_gencpp.dir/build
+.PHONY : MainRobot_gencpp/fast
 
 # Convenience name for target.
 MainRobot/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
@@ -736,6 +916,21 @@ geometry_msgs_generate_messages_eus: MainRobot/CMakeFiles/geometry_msgs_generate
 geometry_msgs_generate_messages_eus/fast:
 	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make MainRobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
 .PHONY : geometry_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+MainRobot/CMakeFiles/MainRobot_generate_messages_lisp.dir/rule:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f CMakeFiles/Makefile2 MainRobot/CMakeFiles/MainRobot_generate_messages_lisp.dir/rule
+.PHONY : MainRobot/CMakeFiles/MainRobot_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+MainRobot_generate_messages_lisp: MainRobot/CMakeFiles/MainRobot_generate_messages_lisp.dir/rule
+
+.PHONY : MainRobot_generate_messages_lisp
+
+# fast build rule for target.
+MainRobot_generate_messages_lisp/fast:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/MainRobot_generate_messages_lisp.dir/build.make MainRobot/CMakeFiles/MainRobot_generate_messages_lisp.dir/build
+.PHONY : MainRobot_generate_messages_lisp/fast
 
 # Convenience name for target.
 MainRobot/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
@@ -947,6 +1142,87 @@ actionlib_generate_messages_py/fast:
 	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/actionlib_generate_messages_py.dir/build.make MainRobot/CMakeFiles/actionlib_generate_messages_py.dir/build
 .PHONY : actionlib_generate_messages_py/fast
 
+include/basic_utility/raspi/src/pigpiod.o: include/basic_utility/raspi/src/pigpiod.cpp.o
+
+.PHONY : include/basic_utility/raspi/src/pigpiod.o
+
+# target to build an object file
+include/basic_utility/raspi/src/pigpiod.cpp.o:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/gain_setting.dir/build.make MainRobot/CMakeFiles/gain_setting.dir/include/basic_utility/raspi/src/pigpiod.cpp.o
+.PHONY : include/basic_utility/raspi/src/pigpiod.cpp.o
+
+include/basic_utility/raspi/src/pigpiod.i: include/basic_utility/raspi/src/pigpiod.cpp.i
+
+.PHONY : include/basic_utility/raspi/src/pigpiod.i
+
+# target to preprocess a source file
+include/basic_utility/raspi/src/pigpiod.cpp.i:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/gain_setting.dir/build.make MainRobot/CMakeFiles/gain_setting.dir/include/basic_utility/raspi/src/pigpiod.cpp.i
+.PHONY : include/basic_utility/raspi/src/pigpiod.cpp.i
+
+include/basic_utility/raspi/src/pigpiod.s: include/basic_utility/raspi/src/pigpiod.cpp.s
+
+.PHONY : include/basic_utility/raspi/src/pigpiod.s
+
+# target to generate assembly for a file
+include/basic_utility/raspi/src/pigpiod.cpp.s:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/gain_setting.dir/build.make MainRobot/CMakeFiles/gain_setting.dir/include/basic_utility/raspi/src/pigpiod.cpp.s
+.PHONY : include/basic_utility/raspi/src/pigpiod.cpp.s
+
+include/basic_utility/raspi/src/rotary_inc.o: include/basic_utility/raspi/src/rotary_inc.cpp.o
+
+.PHONY : include/basic_utility/raspi/src/rotary_inc.o
+
+# target to build an object file
+include/basic_utility/raspi/src/rotary_inc.cpp.o:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/gain_setting.dir/build.make MainRobot/CMakeFiles/gain_setting.dir/include/basic_utility/raspi/src/rotary_inc.cpp.o
+.PHONY : include/basic_utility/raspi/src/rotary_inc.cpp.o
+
+include/basic_utility/raspi/src/rotary_inc.i: include/basic_utility/raspi/src/rotary_inc.cpp.i
+
+.PHONY : include/basic_utility/raspi/src/rotary_inc.i
+
+# target to preprocess a source file
+include/basic_utility/raspi/src/rotary_inc.cpp.i:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/gain_setting.dir/build.make MainRobot/CMakeFiles/gain_setting.dir/include/basic_utility/raspi/src/rotary_inc.cpp.i
+.PHONY : include/basic_utility/raspi/src/rotary_inc.cpp.i
+
+include/basic_utility/raspi/src/rotary_inc.s: include/basic_utility/raspi/src/rotary_inc.cpp.s
+
+.PHONY : include/basic_utility/raspi/src/rotary_inc.s
+
+# target to generate assembly for a file
+include/basic_utility/raspi/src/rotary_inc.cpp.s:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/gain_setting.dir/build.make MainRobot/CMakeFiles/gain_setting.dir/include/basic_utility/raspi/src/rotary_inc.cpp.s
+.PHONY : include/basic_utility/raspi/src/rotary_inc.cpp.s
+
+src/gain_setting.o: src/gain_setting.cpp.o
+
+.PHONY : src/gain_setting.o
+
+# target to build an object file
+src/gain_setting.cpp.o:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/gain_setting.dir/build.make MainRobot/CMakeFiles/gain_setting.dir/src/gain_setting.cpp.o
+.PHONY : src/gain_setting.cpp.o
+
+src/gain_setting.i: src/gain_setting.cpp.i
+
+.PHONY : src/gain_setting.i
+
+# target to preprocess a source file
+src/gain_setting.cpp.i:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/gain_setting.dir/build.make MainRobot/CMakeFiles/gain_setting.dir/src/gain_setting.cpp.i
+.PHONY : src/gain_setting.cpp.i
+
+src/gain_setting.s: src/gain_setting.cpp.s
+
+.PHONY : src/gain_setting.s
+
+# target to generate assembly for a file
+src/gain_setting.cpp.s:
+	cd /home/tsuruhara/KosenFestival2020/kosen_ws/build && $(MAKE) -f MainRobot/CMakeFiles/gain_setting.dir/build.make MainRobot/CMakeFiles/gain_setting.dir/src/gain_setting.cpp.s
+.PHONY : src/gain_setting.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -1008,6 +1284,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... list_install_components"
+	@echo "... gain_setting"
+	@echo "... MainRobot_genlisp"
+	@echo "... MainRobot_geneus"
+	@echo "... MainRobot_generate_messages_eus"
+	@echo "... MainRobot_generate_messages_cpp"
+	@echo "... MainRobot_generate_messages"
 	@echo "... install"
 	@echo "... nav_msgs_generate_messages_py"
 	@echo "... nav_msgs_generate_messages_nodejs"
@@ -1031,6 +1313,7 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... MainRobot_genpy"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... tf_generate_messages_cpp"
@@ -1041,14 +1324,20 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... tf_generate_messages_eus"
 	@echo "... actionlib_msgs_generate_messages_cpp"
+	@echo "... MainRobot_gennodejs"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... MainRobot_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
+	@echo "... _MainRobot_generate_messages_check_deps_motor_serial"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... MainRobot_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_py"
+	@echo "... MainRobot_gencpp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... MainRobot_generate_messages_lisp"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_lisp"
@@ -1066,6 +1355,15 @@ help:
 	@echo "... test"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... actionlib_generate_messages_py"
+	@echo "... include/basic_utility/raspi/src/pigpiod.o"
+	@echo "... include/basic_utility/raspi/src/pigpiod.i"
+	@echo "... include/basic_utility/raspi/src/pigpiod.s"
+	@echo "... include/basic_utility/raspi/src/rotary_inc.o"
+	@echo "... include/basic_utility/raspi/src/rotary_inc.i"
+	@echo "... include/basic_utility/raspi/src/rotary_inc.s"
+	@echo "... src/gain_setting.o"
+	@echo "... src/gain_setting.i"
+	@echo "... src/gain_setting.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
